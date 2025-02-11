@@ -1,1 +1,4 @@
 Flask==3.0.3
+pinecone-client
+python-dotenv
+openai
