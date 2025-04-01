@@ -25,7 +25,7 @@ CORS(app)  # Enable CORS for all routes
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_ENV = "us-east-1"
-INDEX_NAME = "rag-demo"
+INDEX_NAME = "quickstart"
 
 # ======= SETUP =======
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -54,7 +54,7 @@ def retrieve_relevant_chunks(query, top_k=3):
     results = index.query(
         vector=query_embedding,
         top_k=top_k,
-        
+
         include_metadata=True
     )
     
