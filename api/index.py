@@ -54,6 +54,7 @@ def retrieve_relevant_chunks(query, top_k=3):
     results = index.query(
         vector=query_embedding,
         top_k=top_k,
+        
         include_metadata=True
     )
     
